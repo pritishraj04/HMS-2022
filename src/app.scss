@@ -1,0 +1,75 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    color: $accent;
+    text-decoration: underline;
+  }
+}
+ul {
+  list-style: none;
+}
+
+input {
+  padding: 0.5rem;
+  @include border-radius;
+  width: 100%;
+  border: 1px solid $gray;
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+  color: $white;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  @include border-radius;
+  background-color: $accent;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 93%;
+  // Small devices (landscape phones, 576px and up)
+  @media only screen and (min-width: 576px) {
+    max-width: 542px;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media only screen and (min-width: 768px) {
+    max-width: 750px;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media only screen and (min-width: 992px) {
+    max-width: 966px;
+  }
+
+  // X-Large devices (large desktops, 1200px and up)
+  @media only screen and (min-width: 1200px) {
+    max-width: 1060px;
+  }
+
+  // XX-Large devices (larger desktops, 1400px and up)
+  @media only screen and (min-width: 1400px) {
+    max-width: 1220px;
+  }
+}
+
+.container-fluid {
+  max-width: 100%;
+}
