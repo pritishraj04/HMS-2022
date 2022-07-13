@@ -103,18 +103,23 @@
 
 <style lang="scss">
   .side-panel {
+    display: inline-block;
     background-color: $bg-gray;
-    max-width: 280px;
+    width: 280px;
     min-height: 100vh;
     margin-top: -71px;
     padding-top: 71px;
     transition: max-width 300ms;
     @include border-radius;
     &.close {
-      max-width: 65px;
+      width: 65px;
     }
     @include breakpoint(mobile) {
-      max-width: 100%;
+      position: fixed;
+      top: 71px;
+      margin-top: 0;
+      padding-top: 0;
+      width: 100%;
       text-align: center;
       &.close {
         max-width: 0px;
@@ -139,8 +144,7 @@
           display: none;
         }
       }
-      &:hover,
-      &.active {
+      &:hover {
         text-decoration: none;
         background-color: $accent;
         color: $white;
@@ -148,6 +152,8 @@
       }
       &.active {
         box-shadow: 0px 0px 5px 2px $btn-gray;
+        background-color: $accent;
+        color: $white;
       }
     }
   }
@@ -160,7 +166,7 @@
   .opener {
     position: fixed;
     bottom: 0;
-    width: 280px;
+    width: inherit;
     background: $gray;
     @include border-radius;
     border-bottom-left-radius: 0;

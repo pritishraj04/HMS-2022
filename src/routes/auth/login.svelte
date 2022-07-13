@@ -42,7 +42,9 @@
       </div>
     {/if}
     <SignIn on:login={signIn} />
-    <div>Already have an account? <a href="/auth/register">Sign Up</a></div>
+    <div>
+      Does not have an account? <a href="/auth/register">Sign Up</a>
+    </div>
   </div>
 </div>
 

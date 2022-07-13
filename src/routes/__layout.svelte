@@ -64,14 +64,14 @@
       <a href="/"><h2>Logo</h2></a>
       <ul class="menu">
         {#if $session["user"] != null}
-          <li class="user" on:click={accMenuToggle}>
+          <li
+            class="user"
+            on:click={accMenuToggle}
+            use:clickOutside
+            on:click_outside={accMenuOpen && accMenuClose}
+          >
             <div class="icon"><TiUser /></div>
-            <ul
-              class="sub-menu"
-              use:clickOutside
-              on:click_outside={accMenuOpen && accMenuClose}
-              style={accMenuOpen ? "display: flex;" : ""}
-            >
+            <ul class="sub-menu" style={accMenuOpen ? "display: flex;" : ""}>
               <li><a href="/">Account</a></li>
               <li><a href="/admin">Dashboard</a></li>
               <li>

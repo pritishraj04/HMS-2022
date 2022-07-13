@@ -39,6 +39,15 @@ input {
   background-color: $accent;
   border: none;
   cursor: pointer;
+  transition: transform 400ms;
+  &:hover {
+    color: $white;
+    text-decoration: none;
+    transform: scale(1.01);
+  }
+}
+.btn-red {
+  background-color: $negative;
 }
 
 .container {
