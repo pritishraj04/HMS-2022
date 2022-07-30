@@ -17,14 +17,14 @@
     <h2 class="title">Doctor Profile</h2>
     <div class="field">
       <h4>Photo</h4>
-      {#if profile.profilePic === null}
+      {#if profile.profilePic}
+        <img src={profile.profilePic} id="profilePic" alt="Profile pic" />
+      {:else}
         <img
           src="https://picsum.photos/200/300"
           id="profilePic"
           alt="Profile pic"
         />
-      {:else}
-        <img src={profile.profilePic} id="profilePic" alt="Profile pic" />
       {/if}
       {#if isEditing}
         <button class="btn-primary">Upload Image</button>

@@ -9,6 +9,9 @@
 </svelte:head>
 
 <div class="container">
+  <div class="header">
+    <div class="title"><h1>Doctors</h1></div>
+  </div>
   <div class="doctors">
     {#each doctors as doctor}
       <div class="doctor-single">
